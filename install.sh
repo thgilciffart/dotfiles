@@ -1,1 +1,1 @@
-echo y | LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" $(cat pkglist.txt)
+echo y | LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" -S $(cat pkglist.txt)
