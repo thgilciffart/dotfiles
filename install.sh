@@ -1,1 +1,1 @@
-yay -S --nodiffmenu --noeditmenu --nouseask --nocleanmenu --noupgrademenuswayfx mako tofi waybar alacritty fish eza xdg-desktop-portal-gtk azote rightnessctl blueman bluez-utils bluez wl-clipboard clapboard-git slurp grim neovim neofetch nemo yazi htop flatpak qt6-svg qt6-declarative p7zip 
+LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S $(cat program-list)
