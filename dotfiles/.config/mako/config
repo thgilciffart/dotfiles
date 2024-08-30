@@ -1,0 +1,9 @@
+font=JetBrainsMono Nerd Font bold 12
+background-color=#1d2021
+text-color=#d4be98
+border-size=2
+border-color=#303536
+border-radius=8
+icons=0
+text-alignment=left
+default-timeout=5000

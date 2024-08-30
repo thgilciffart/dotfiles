@@ -1,0 +1,154 @@
+font pango:JetBrainsMono Nerd Font bold 12
+
+exec ~/.azotebg
+
+gaps inner 4
+gaps outer 4
+
+ default_border pixel 2
+ default_floating_border pixel 2
+
+# class border backgr. text indicator child_border
+client.focused #303536 #303536 #d4be98 #303536 #ebdbb2
+client.focused_inactive #303536 #303536 #d4be98 #303536 #fbf1c7
+client.unfocused #0a0b0b #303536 #d4be98 #0a0b0b #a89984
+client.urgent #d8a657 #303536 #1d2021 #d8a657 #d8a657
+client.placeholder #7daea3 #303536 #1d2021 #7daea3 #7daea3
+
+# swayfx
+ blur disable
+ blur_xray disable
+ blur_passes 0
+ blur_radius 5
+ shadows disable
+ corner_radius 8
+ layer_effects "waybar" shadows disable; corner_radius 8; blur disable
+
+bar {
+swaybar_command waybar
+
+# status_command /usr/bin/i3status-rs $HOME/.config/i3status/config.toml
+# position top
+# gaps 8 8 0 8
+# height 32
+# font pango:JetBrainsMono Nerd Font bold 12
+# colors {
+# background #1d2021ff
+# focused_workspace #b7c37fff #a9b665ff #0a0b0bff
+# inactive_workspace #1d2021ff #0a0b0bff #c7ab7aff
+# }
+}
+
+# variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty
+set $menu tofi-drun | xargs swaymsg exec --
+
+# common bindings
+bindsym $mod+Return exec $term
+bindsym $mod+d exec $menu
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m "Exit Sway?" -B "Yes, exit Sway" "swaymsg exit" --font="JetBrainsMono Nerd Font bold 12"
+floating_modifier $mod normal
+
+# more bindings
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+v floating toggle
+bindsym $mod+b splith
+# bindsym $mod+v splitv
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+r mode "resize"
+
+#Volume and brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+#Screenshot and clipboard
+bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
+bindsym $mod+v exec clapboard
+exec wl-paste --watch clapboard store
+exec wl-paste -p --watch clapboard store
+#Wallpaper changer
+bindsym $mod+Shift+w exec azote
+
+mode "resize" {
+bindsym $left resize shrink width 20px
+bindsym $down resize grow height 20px
+bindsym $up resize shrink height 20px
+bindsym $right resize grow width 20px
+
+bindsym Left resize shrink width 20px
+bindsym Down resize grow height 20px
+bindsym Up resize shrink height 20px
+bindsym Right resize grow width 20px
+
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+
+# includes
+include /etc/sway/config.d/*
+
+#resolution 
+output eDP-1 scale 1 res 2160x1440@60.00hz
+
+#Touchpad
+input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad {
+    tap enabled
+    natural_scroll enabled
+    dwt disabled
+    pointer_accel 0.5
+    click_method button_areas
+    drag enabled
+    scroll_factor 0.4
+}
+
+#Autostart
+exec_always nm-applet
