@@ -1,1 +1,1 @@
-yay --answerdiff None --answerclean None --mflags "--noconfirm" -S $(cat pkglist.txt)
+echo y | yay --sudoloop --answerdiff None --answerclean None --mflags "--noconfirm" -S $(cat pkglist.txt)
