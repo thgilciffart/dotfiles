@@ -1,1 +1,1 @@
-LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S $(cat program-list)
+echo y | LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" $(cat pkglist.txt)
