@@ -1,1 +1,1 @@
-swayfx-git mako-git tofi waybar-git alacritty-git fish-git eza-git xdg-desktop-portal-gtk-git azote brightnessctl blueman bluez-utils bluez wl-clipboard clapboard-git slurp grim neovim neofetch nemo yazi htop flatpak qt6-svg qt6-declarative p7zip ttf-jetbrains-mono-nerd sddm
+swayfx mako tofi waybar alacritty fish eza xdg-desktop-portal-gtk azote brightnessctl blueman bluez-utils bluez wl-clipboard clapboard-git slurp grim neovim neofetch nemo yazi htop flatpak qt6-svg qt6-declarative p7zip ttf-jetbrains-mono-nerd sddm
