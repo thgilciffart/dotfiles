@@ -136,8 +136,11 @@ bindsym Escape mode "default"
 # includes
 include /etc/sway/config.d/*
 
-#resolution 
-output eDP-1 scale 1 res 2160x1440@60.00hz
+# laptop resolution
+output eDP-1 {
+	mode 2160x1440@60.000hz
+	scale 1
+} 
 
 #Touchpad
 input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad {
