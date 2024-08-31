@@ -24,3 +24,6 @@ config.sh is tuned for me, check the sway config and other configs to make sure 
 | Editor                 | Neovim              |
 | Fetch                  | Neofetch            |
 | Background changer     | Azote               |
+
+# OTHER
+Firefox css theme https://github.com/RemyIsCool/AnimatedFox?tab=readme-ov-file
