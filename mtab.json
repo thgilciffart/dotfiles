@@ -1,0 +1,124 @@
+{
+    "user": {
+      "name": "user"
+    },
+    "title": {
+      "defaultTitle": "mtab",
+      "dynamic": {
+        "enabled": true
+      },
+      "faviconType": "default"
+    },
+    "message": {
+      "enabled": true,
+      "font": "\"Jetbrains-Mono-Regular-Fixed\"",
+      "textColor": "#ffffff",
+      "type": "time-24",
+      "customText": "your custom text"
+    },
+    "wallpaper": {
+      "type": "fileUpload",
+      "enabled": true,
+      "url": ""
+    },
+    "ui": {
+      "style": "glass",
+      "foregroundColor": "#262626",
+      "backgroundColor": "#171717",
+      "highlightColor": "#ffffff20",
+      "customCSS": "/* input custom css... */"
+    },
+    "animations": {
+      "enabled": true,
+      "bookmarkTiming": "uniform",
+      "initialType": "animate-up-smooth",
+      "searchType": "animate-page-shrink",
+      "bookmarkType": "animate-page-down"
+    },
+    "search": {
+      "enabled": true,
+      "font": "\"Jetbrains-Mono-Regular-Fixed\"",
+      "textColor": "#ffffff",
+      "placeholderText": "search...",
+      "bookmarkPlaceholderText": "find bookmark...",
+      "placeholderTextColor": "#a1a1aa",
+      "searchIconColor": "#14b8a6",
+      "bookmarkIconColor": "#3b82f6",
+      "selectIconColor": "#f59e0b",
+      "engine": "google",
+      "useCustomEngine": false,
+      "customEngineURL": "",
+      "focusedBorderColor": "#0ea5e9"
+    },
+    "hotkeys": {
+      "enabled": true,
+      "activationKey": " ",
+      "closePageKey": "x",
+      "searchBookmarksKey": "b"
+    },
+    "bookmarks": {
+      "type": "user-defined",
+      "userDefinedCols": 4,
+      "userDefined": [
+        {
+          "name": "classroom",
+          "url": "https://classroom.google.com/u/1/?pli=1",
+          "color": "#ebdbb2",
+          "iconType": "ri-graduation-cap-line",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "docs",
+          "url": "https://docs.google.com/document/u/1/?tgif=d",
+          "color": "#ebdbb2",
+          "iconType": "ri-file-text-line",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "gmail",
+          "url": "https://mail.google.com/mail/u/1/#inbox",
+          "color": "#ebdbb2",
+          "iconType": "ri-mail-line",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "drive",
+          "url": "https://drive.google.com/drive/u/1/home",
+          "color": "#ebdbb2",
+          "iconType": "ri-hard-drive-3-line",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "github",
+          "url": "https://github.com",
+          "color": "#ebdbb2",
+          "iconType": "ri-github-fill",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "chatgpt",
+          "url": "https://chatgpt.com/",
+          "color": "#ebdbb2",
+          "iconType": "ri-robot-3-line",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "youtube",
+          "url": "https://youtube.com",
+          "color": "#ebdbb2",
+          "iconType": "ri-youtube-fill",
+          "iconColor": "#ffffff"
+        },
+        {
+          "name": "desmos",
+          "url": "https://www.desmos.com/calculator",
+          "color": "#ebdbb2",
+          "iconType": "ri-pencil-ruler-line",
+          "iconColor": "#ffffff"
+        }
+      ],
+      "defaultBlockyCols": 4,
+      "defaultBlockyColor": "#ffffff"
+    }
+  }
+  
