@@ -22,7 +22,7 @@ config.sh is tuned for me, check the sway config and other configs to make sure 
 | File explorer GUI      | nemo and thunar     |
 | Clipboard              | Clapboard           |
 | Editor                 | Neovim              |
-| Fetch                  | Neofetch            |
+| Fetch                  | nitch               |
 | Background changer     | Azote               |
 
 # OTHER
