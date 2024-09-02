@@ -1,3 +1,6 @@
+# Install notes
+You may need to manually enable sddm via `sudo systemctl enable sddm.service --force'
+
 # Dot files 
 Install dependencies via install.sh and config.sh will install the configs
 Used on EndeavourOS
