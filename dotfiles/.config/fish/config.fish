@@ -1,9 +1,7 @@
-if status is-interactive
-end
+source $HOME/.config/fish/cachyos-config.fish
 
-function fish_greeting
-end
-
-alias ls="eza -l --git --color=always --icons=never --sort=extension --no-user --no-permissions"
-alias ascii="bash $HOME/.config/fish/ascii.sh"
-nitch
+# overwrite greeting
+# potentially disabling fastfetch
+#function fish_greeting
+#    # smth smth
+#end
